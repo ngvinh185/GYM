@@ -1,21 +1,18 @@
 from functools import lru_cache
 
 from langchain_core.vectorstores import InMemoryVectorStore
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain.tools import tool
 from student_assitant.pdf.pdf_handle import get_docs
 
-# Model đa ngôn ngữ, chạy tốt với tiếng Việt. Đổi model_name nếu muốn model khác.
-EMBEDDING_MODEL_NAME = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+# Model embedding của OpenAI. Đổi sang "text-embedding-3-large" nếu muốn chính xác hơn.
+EMBEDDING_MODEL_NAME = "text-embedding-3-small"
 
 
 @lru_cache(maxsize=1)
 def _get_embeddings():
-    return HuggingFaceEmbeddings(
-        model_name=EMBEDDING_MODEL_NAME,
-        model_kwargs={"device": "cpu"},  # đổi "cpu" nếu không có GPU
-        encode_kwargs={"normalize_embeddings": True},
-    )
+    # API key lấy từ biến môi trường OPENAI_API_KEY (file .env)
+    return OpenAIEmbeddings(model=EMBEDDING_MODEL_NAME)
 
 
 @lru_cache(maxsize=1)
@@ -29,7 +26,7 @@ def _get_retriever():
 
 @tool
 def retrieve_information(query: str) -> str:
-    """Search and return information related to gyn information from the PDF document."""
+    """Search and return information related to the gym from the gym information document."""
     retriever = _get_retriever()
     retrieved_docs = retriever.invoke(query)
     return "\n\n".join([doc.page_content for doc in retrieved_docs])
