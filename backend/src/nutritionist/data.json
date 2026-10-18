@@ -1,0 +1,1136 @@
+{
+  "thit": [
+    {
+      "ten": "Thịt thăn lợn (sống)",
+      "protein": 21,
+      "carb": 0,
+      "fat": 4.5,
+      "gia_100g": 16000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Nạc vai lợn (sống)",
+      "protein": 18,
+      "carb": 0,
+      "fat": 12,
+      "gia_100g": 13000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Ba chỉ lợn (sống)",
+      "protein": 12,
+      "carb": 0,
+      "fat": 32,
+      "gia_100g": 15000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Sườn lợn (sống)",
+      "protein": 17,
+      "carb": 0,
+      "fat": 21,
+      "gia_100g": 16500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Giò heo (sống)",
+      "protein": 16,
+      "carb": 0,
+      "fat": 18,
+      "gia_100g": 12000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Thịt lợn xay (sống)",
+      "protein": 18,
+      "carb": 0,
+      "fat": 17,
+      "gia_100g": 13300,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Gan lợn (sống)",
+      "protein": 21,
+      "carb": 2.5,
+      "fat": 4,
+      "gia_100g": 8000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Tim lợn (sống)",
+      "protein": 17,
+      "carb": 0,
+      "fat": 4.5,
+      "gia_100g": 10000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Ức gà (sống)",
+      "protein": 23,
+      "carb": 0,
+      "fat": 2,
+      "gia_100g": 8500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Đùi gà có da (sống)",
+      "protein": 16,
+      "carb": 0,
+      "fat": 11,
+      "gia_100g": 9000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Đùi gà bỏ da (sống)",
+      "protein": 19,
+      "carb": 0,
+      "fat": 4,
+      "gia_100g": 10000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Cánh gà (sống)",
+      "protein": 18,
+      "carb": 0,
+      "fat": 13,
+      "gia_100g": 12000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Thịt bò nạc (sống)",
+      "protein": 21,
+      "carb": 0,
+      "fat": 5,
+      "gia_100g": 28000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Thăn bò (sống)",
+      "protein": 21,
+      "carb": 0,
+      "fat": 6,
+      "gia_100g": 32000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Bắp bò (sống)",
+      "protein": 20,
+      "carb": 0,
+      "fat": 4,
+      "gia_100g": 28000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Ba chỉ bò (sống)",
+      "protein": 16,
+      "carb": 0,
+      "fat": 22,
+      "gia_100g": 38000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Thịt vịt có da (sống)",
+      "protein": 15,
+      "carb": 0,
+      "fat": 25,
+      "gia_100g": 9000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Thịt dê (sống)",
+      "protein": 20,
+      "carb": 0,
+      "fat": 3,
+      "gia_100g": 28000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Thịt thỏ (sống)",
+      "protein": 21,
+      "carb": 0,
+      "fat": 4,
+      "gia_100g": 15000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Thịt trâu (sống)",
+      "protein": 20,
+      "carb": 0,
+      "fat": 2,
+      "gia_100g": 25000,
+      "nguon": "uoc"
+    }
+  ],
+  "hai_san": [
+    {
+      "ten": "Cá hồi (sống)",
+      "protein": 20,
+      "carb": 0,
+      "fat": 13,
+      "gia_100g": 33000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Cá thu (sống)",
+      "protein": 19,
+      "carb": 0,
+      "fat": 10,
+      "gia_100g": 25000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Cá ngừ (sống)",
+      "protein": 23,
+      "carb": 0,
+      "fat": 1,
+      "gia_100g": 15000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Cá basa (sống)",
+      "protein": 15,
+      "carb": 0,
+      "fat": 3,
+      "gia_100g": 6500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Tôm (sống)",
+      "protein": 20,
+      "carb": 0,
+      "fat": 1,
+      "gia_100g": 14000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Mực (sống)",
+      "protein": 15,
+      "carb": 1.5,
+      "fat": 1.4,
+      "gia_100g": 17000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Cá rô phi (sống)",
+      "protein": 20,
+      "carb": 0,
+      "fat": 2.5,
+      "gia_100g": 6000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Cá chép (sống)",
+      "protein": 18,
+      "carb": 0,
+      "fat": 5.6,
+      "gia_100g": 7000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Cá lóc (sống)",
+      "protein": 18,
+      "carb": 0,
+      "fat": 2,
+      "gia_100g": 8300,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Cá trê (sống)",
+      "protein": 16,
+      "carb": 0,
+      "fat": 6,
+      "gia_100g": 7000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Cá nục (sống)",
+      "protein": 20,
+      "carb": 0,
+      "fat": 4,
+      "gia_100g": 7500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Cá cơm (sống)",
+      "protein": 20,
+      "carb": 0,
+      "fat": 5,
+      "gia_100g": 8000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Lươn (sống)",
+      "protein": 18,
+      "carb": 0,
+      "fat": 11,
+      "gia_100g": 18000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Thịt cua (sống)",
+      "protein": 17,
+      "carb": 0,
+      "fat": 1.5,
+      "gia_100g": 40000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Ghẹ (sống)",
+      "protein": 18,
+      "carb": 0,
+      "fat": 1,
+      "gia_100g": 30000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Nghêu (sống)",
+      "protein": 10,
+      "carb": 3,
+      "fat": 1,
+      "gia_100g": 4000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Sò điệp (sống)",
+      "protein": 17,
+      "carb": 3,
+      "fat": 0.8,
+      "gia_100g": 30000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Hàu (sống)",
+      "protein": 9,
+      "carb": 5,
+      "fat": 2,
+      "gia_100g": 15000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Bạch tuộc (sống)",
+      "protein": 15,
+      "carb": 2,
+      "fat": 1,
+      "gia_100g": 18000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Cá tuyết (sống)",
+      "protein": 18,
+      "carb": 0,
+      "fat": 0.7,
+      "gia_100g": 35000,
+      "nguon": "uoc"
+    }
+  ],
+  "trung_sua_dau": [
+    {
+      "ten": "Trứng gà (nguyên quả)",
+      "protein": 13,
+      "carb": 1,
+      "fat": 10,
+      "gia_100g": 4700,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Lòng trắng trứng gà",
+      "protein": 11,
+      "carb": 0.7,
+      "fat": 0.2,
+      "gia_100g": 3000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Lòng đỏ trứng gà",
+      "protein": 16,
+      "carb": 3.6,
+      "fat": 27,
+      "gia_100g": 9000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Trứng vịt",
+      "protein": 13,
+      "carb": 1.5,
+      "fat": 14,
+      "gia_100g": 5500,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Trứng cút",
+      "protein": 13,
+      "carb": 0.4,
+      "fat": 11,
+      "gia_100g": 8000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Sữa tươi không đường",
+      "protein": 3.3,
+      "carb": 4.8,
+      "fat": 3.3,
+      "gia_100g": 4200,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Sữa tươi tách béo",
+      "protein": 3.4,
+      "carb": 5,
+      "fat": 0.1,
+      "gia_100g": 4200,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Sữa chua Hy Lạp không đường",
+      "protein": 10,
+      "carb": 4,
+      "fat": 0.4,
+      "gia_100g": 35000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Sữa chua có đường",
+      "protein": 3.5,
+      "carb": 15,
+      "fat": 1.5,
+      "gia_100g": 6000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Phô mai cheddar",
+      "protein": 25,
+      "carb": 1.3,
+      "fat": 33,
+      "gia_100g": 25000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Phô mai mozzarella",
+      "protein": 22,
+      "carb": 2.2,
+      "fat": 22,
+      "gia_100g": 25000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Phô mai cottage",
+      "protein": 11,
+      "carb": 3.4,
+      "fat": 4.3,
+      "gia_100g": 20000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Sữa đặc có đường",
+      "protein": 8,
+      "carb": 55,
+      "fat": 8.7,
+      "gia_100g": 6500,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Sữa đậu nành không đường",
+      "protein": 3,
+      "carb": 1.5,
+      "fat": 1.8,
+      "gia_100g": 2500,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Đậu hũ",
+      "protein": 8,
+      "carb": 2,
+      "fat": 5,
+      "gia_100g": 3000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Tào phớ (đậu hũ non)",
+      "protein": 5,
+      "carb": 2,
+      "fat": 3,
+      "gia_100g": 1500,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Đậu nành (luộc)",
+      "protein": 17,
+      "carb": 10,
+      "fat": 9,
+      "gia_100g": 3000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Đậu đen (luộc)",
+      "protein": 9,
+      "carb": 24,
+      "fat": 0.5,
+      "gia_100g": 3000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Đậu xanh (luộc)",
+      "protein": 7,
+      "carb": 19,
+      "fat": 0.4,
+      "gia_100g": 3000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Đậu gà (luộc)",
+      "protein": 9,
+      "carb": 27,
+      "fat": 2.6,
+      "gia_100g": 5000,
+      "nguon": "uoc"
+    }
+  ],
+  "tinh_bot": [
+    {
+      "ten": "Cơm trắng (chín)",
+      "protein": 2.7,
+      "carb": 28,
+      "fat": 0.3,
+      "gia_100g": 800,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Cơm gạo lứt (chín)",
+      "protein": 2.6,
+      "carb": 23,
+      "fat": 0.9,
+      "gia_100g": 1200,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Xôi nếp (chín)",
+      "protein": 4,
+      "carb": 38,
+      "fat": 0.3,
+      "gia_100g": 2000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Cháo trắng (chín)",
+      "protein": 1.5,
+      "carb": 10,
+      "fat": 0.2,
+      "gia_100g": 500,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Bún tươi",
+      "protein": 1.7,
+      "carb": 25,
+      "fat": 0.1,
+      "gia_100g": 1200,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Bánh phở tươi",
+      "protein": 2,
+      "carb": 24,
+      "fat": 0.2,
+      "gia_100g": 1500,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Mì sợi (chín)",
+      "protein": 5,
+      "carb": 25,
+      "fat": 1,
+      "gia_100g": 2000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Mì ý (chín)",
+      "protein": 5.8,
+      "carb": 31,
+      "fat": 0.9,
+      "gia_100g": 2500,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Miến dong (chín)",
+      "protein": 0.1,
+      "carb": 22,
+      "fat": 0,
+      "gia_100g": 3000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Bánh mì",
+      "protein": 9,
+      "carb": 50,
+      "fat": 3,
+      "gia_100g": 8000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Bánh mì nguyên cám",
+      "protein": 12,
+      "carb": 43,
+      "fat": 3.5,
+      "gia_100g": 12000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Bánh tráng (khô)",
+      "protein": 1,
+      "carb": 83,
+      "fat": 0.5,
+      "gia_100g": 3000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Khoai lang (luộc)",
+      "protein": 1.6,
+      "carb": 20,
+      "fat": 0.1,
+      "gia_100g": 2500,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Khoai tây (luộc)",
+      "protein": 2,
+      "carb": 17,
+      "fat": 0.1,
+      "gia_100g": 3500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Khoai mì/sắn (luộc)",
+      "protein": 1.4,
+      "carb": 38,
+      "fat": 0.3,
+      "gia_100g": 1500,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Ngô (luộc)",
+      "protein": 3.4,
+      "carb": 19,
+      "fat": 1.5,
+      "gia_100g": 3000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Khoai môn (luộc)",
+      "protein": 1.5,
+      "carb": 26,
+      "fat": 0.2,
+      "gia_100g": 4000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Yến mạch (khô)",
+      "protein": 13,
+      "carb": 66,
+      "fat": 7,
+      "gia_100g": 7000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Diêm mạch/quinoa (chín)",
+      "protein": 4.4,
+      "carb": 21,
+      "fat": 1.9,
+      "gia_100g": 10000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Bột mì (khô)",
+      "protein": 10,
+      "carb": 76,
+      "fat": 1,
+      "gia_100g": 2000,
+      "nguon": "uoc"
+    }
+  ],
+  "rau": [
+    {
+      "ten": "Rau muống (sống)",
+      "protein": 2,
+      "carb": 3,
+      "fat": 0.2,
+      "gia_100g": 1500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Cải thìa (sống)",
+      "protein": 1.5,
+      "carb": 2.2,
+      "fat": 0.2,
+      "gia_100g": 2500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Bông cải xanh (sống)",
+      "protein": 2.8,
+      "carb": 7,
+      "fat": 0.4,
+      "gia_100g": 4500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Bắp cải (sống)",
+      "protein": 1.3,
+      "carb": 6,
+      "fat": 0.1,
+      "gia_100g": 1500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Cà chua (sống)",
+      "protein": 0.9,
+      "carb": 3.9,
+      "fat": 0.2,
+      "gia_100g": 2500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Dưa chuột (sống)",
+      "protein": 0.7,
+      "carb": 3.6,
+      "fat": 0.1,
+      "gia_100g": 2000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Cà rốt (sống)",
+      "protein": 0.9,
+      "carb": 10,
+      "fat": 0.2,
+      "gia_100g": 2500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Bí đỏ (sống)",
+      "protein": 1,
+      "carb": 6.5,
+      "fat": 0.1,
+      "gia_100g": 2500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Nấm (sống)",
+      "protein": 3.1,
+      "carb": 3.3,
+      "fat": 0.3,
+      "gia_100g": 4000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Súp lơ trắng (sống)",
+      "protein": 1.9,
+      "carb": 5,
+      "fat": 0.3,
+      "gia_100g": 4500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Cải ngọt (sống)",
+      "protein": 1.5,
+      "carb": 2.5,
+      "fat": 0.2,
+      "gia_100g": 2500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Xà lách (sống)",
+      "protein": 1.4,
+      "carb": 2.9,
+      "fat": 0.2,
+      "gia_100g": 3500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Cải bó xôi (sống)",
+      "protein": 2.9,
+      "carb": 3.6,
+      "fat": 0.4,
+      "gia_100g": 4000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Măng tây (sống)",
+      "protein": 2.2,
+      "carb": 3.9,
+      "fat": 0.1,
+      "gia_100g": 10000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Ớt chuông (sống)",
+      "protein": 1,
+      "carb": 6,
+      "fat": 0.3,
+      "gia_100g": 4000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Cà tím (sống)",
+      "protein": 1,
+      "carb": 6,
+      "fat": 0.2,
+      "gia_100g": 2500,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Bầu (sống)",
+      "protein": 0.6,
+      "carb": 3.4,
+      "fat": 0.1,
+      "gia_100g": 1500,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Mướp (sống)",
+      "protein": 1,
+      "carb": 3.4,
+      "fat": 0.2,
+      "gia_100g": 3000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Đậu cove (sống)",
+      "protein": 1.8,
+      "carb": 7,
+      "fat": 0.2,
+      "gia_100g": 4000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Hành tây (sống)",
+      "protein": 1.1,
+      "carb": 9,
+      "fat": 0.1,
+      "gia_100g": 2500,
+      "nguon": "uoc"
+    }
+  ],
+  "hoa_qua": [
+    {
+      "ten": "Chuối",
+      "protein": 1.1,
+      "carb": 23,
+      "fat": 0.3,
+      "gia_100g": 2500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Táo",
+      "protein": 0.3,
+      "carb": 14,
+      "fat": 0.2,
+      "gia_100g": 7000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Cam",
+      "protein": 0.9,
+      "carb": 12,
+      "fat": 0.1,
+      "gia_100g": 3000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Xoài",
+      "protein": 0.8,
+      "carb": 15,
+      "fat": 0.4,
+      "gia_100g": 4000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Dưa hấu",
+      "protein": 0.6,
+      "carb": 8,
+      "fat": 0.2,
+      "gia_100g": 1500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Thanh long",
+      "protein": 1.1,
+      "carb": 11,
+      "fat": 0.4,
+      "gia_100g": 2500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Nho",
+      "protein": 0.7,
+      "carb": 18,
+      "fat": 0.2,
+      "gia_100g": 15000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Ổi",
+      "protein": 2.6,
+      "carb": 14,
+      "fat": 1,
+      "gia_100g": 2000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Đu đủ",
+      "protein": 0.5,
+      "carb": 11,
+      "fat": 0.3,
+      "gia_100g": 1500,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Dứa",
+      "protein": 0.5,
+      "carb": 13,
+      "fat": 0.1,
+      "gia_100g": 1500,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Dưa lưới",
+      "protein": 0.8,
+      "carb": 8,
+      "fat": 0.2,
+      "gia_100g": 3000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Lê",
+      "protein": 0.4,
+      "carb": 15,
+      "fat": 0.1,
+      "gia_100g": 7000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Kiwi",
+      "protein": 1.1,
+      "carb": 15,
+      "fat": 0.5,
+      "gia_100g": 15000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Dâu tây",
+      "protein": 0.7,
+      "carb": 7.7,
+      "fat": 0.3,
+      "gia_100g": 15000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Bưởi",
+      "protein": 0.8,
+      "carb": 10,
+      "fat": 0.1,
+      "gia_100g": 2500,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Quýt",
+      "protein": 0.8,
+      "carb": 13,
+      "fat": 0.3,
+      "gia_100g": 3000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Vải",
+      "protein": 0.8,
+      "carb": 16.5,
+      "fat": 0.4,
+      "gia_100g": 4000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Nhãn",
+      "protein": 1,
+      "carb": 15,
+      "fat": 0.1,
+      "gia_100g": 4000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Mít",
+      "protein": 1.7,
+      "carb": 23,
+      "fat": 0.6,
+      "gia_100g": 4000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Sầu riêng",
+      "protein": 1.5,
+      "carb": 27,
+      "fat": 5,
+      "gia_100g": 18000,
+      "nguon": "tim"
+    }
+  ],
+  "hat_chat_beo": [
+    {
+      "ten": "Trái bơ (phần cùi)",
+      "protein": 2,
+      "carb": 9,
+      "fat": 15,
+      "gia_100g": 4000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Hạnh nhân",
+      "protein": 21,
+      "carb": 22,
+      "fat": 50,
+      "gia_100g": 22000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Đậu phộng",
+      "protein": 26,
+      "carb": 16,
+      "fat": 49,
+      "gia_100g": 6000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Óc chó",
+      "protein": 15,
+      "carb": 14,
+      "fat": 65,
+      "gia_100g": 20000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Bơ đậu phộng",
+      "protein": 25,
+      "carb": 20,
+      "fat": 50,
+      "gia_100g": 15000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Bơ lạt",
+      "protein": 0.9,
+      "carb": 0.1,
+      "fat": 81,
+      "gia_100g": 25000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Dầu ăn",
+      "protein": 0,
+      "carb": 0,
+      "fat": 100,
+      "gia_100g": 5000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Hạt điều",
+      "protein": 18,
+      "carb": 30,
+      "fat": 44,
+      "gia_100g": 15000,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Hạt macca",
+      "protein": 8,
+      "carb": 14,
+      "fat": 76,
+      "gia_100g": 40000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Hạt dẻ cười",
+      "protein": 20,
+      "carb": 28,
+      "fat": 45,
+      "gia_100g": 45000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Hạt chia",
+      "protein": 17,
+      "carb": 42,
+      "fat": 31,
+      "gia_100g": 20000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Hạt lanh",
+      "protein": 18,
+      "carb": 29,
+      "fat": 42,
+      "gia_100g": 10000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Hạt hướng dương",
+      "protein": 21,
+      "carb": 20,
+      "fat": 51,
+      "gia_100g": 8000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Hạt bí",
+      "protein": 30,
+      "carb": 11,
+      "fat": 49,
+      "gia_100g": 15000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Mè (vừng)",
+      "protein": 18,
+      "carb": 23,
+      "fat": 50,
+      "gia_100g": 6000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Dừa nạo khô",
+      "protein": 7,
+      "carb": 24,
+      "fat": 65,
+      "gia_100g": 8000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Dầu olive",
+      "protein": 0,
+      "carb": 0,
+      "fat": 100,
+      "gia_100g": 25000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Mỡ lợn",
+      "protein": 0,
+      "carb": 0,
+      "fat": 100,
+      "gia_100g": 6900,
+      "nguon": "tim"
+    },
+    {
+      "ten": "Sốt mayonnaise",
+      "protein": 1,
+      "carb": 1,
+      "fat": 75,
+      "gia_100g": 10000,
+      "nguon": "uoc"
+    },
+    {
+      "ten": "Hạt phỉ",
+      "protein": 15,
+      "carb": 17,
+      "fat": 61,
+      "gia_100g": 45000,
+      "nguon": "uoc"
+    }
+  ]
+}

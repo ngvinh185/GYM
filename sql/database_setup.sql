@@ -16,7 +16,7 @@ DROP TABLE IF EXISTS users CASCADE;
 DROP TYPE IF EXISTS user_role CASCADE;
 DROP TYPE IF EXISTS enrollment_status CASCADE;
 DROP TYPE IF EXISTS course_level CASCADE;
-
+DROP TABLE IF EXISTS course_lessons CASCADE;
 -- =====================================================
 -- 1. ENUM TYPES
 -- =====================================================
@@ -53,7 +53,7 @@ CREATE TABLE users (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
         CONSTRAINT chk_users_password_hash_bcrypt
-            CHECK (password_hash ~ '^\\$2[aby]\\$[0-9]{2}\\$.{53}$')
+            CHECK (password_hash ~ '^\$2[aby]\$[0-9]{2}\$.{53}$')
 );
 
 -- Index cho tìm kiếm nhanh

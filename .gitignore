@@ -29,3 +29,16 @@ tmp/
 
 # OS files
 Thumbs.db
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Biến môi trường
+.env
+.env.*
+!.env.example
+
+*.zip

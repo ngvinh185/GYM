@@ -4,9 +4,9 @@
 // Cấu hình kết nối tới Supabase
 // Thay đổi SUPABASE_URL và SUPABASE_ANON_KEY bằng thông tin của bạn
 
-const DEFAULT_SUPABASE_URL = "https://chfbdpcgstloqoairtrs.supabase.co";
+const DEFAULT_SUPABASE_URL = "https://mcyhkfhbbckeoorhvqiu.supabase.co";
 const DEFAULT_SUPABASE_ANON_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNoZmJkcGNnc3Rsb3FvYWlydHJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyODIwMDEsImV4cCI6MjA4NTg1ODAwMX0.AtpjoPgPFrcMWnt9X3yHmTvOMgXFtb3vNvxptPqJpsU";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jeWhrZmhiYmNrZW9vcmh2cWl1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA2NjE1NTYsImV4cCI6MjEwNjIzNzU1Nn0.sIXDvONI3GP7d60BzGu_xtwS6ekFC5xB6DeRE5nsqw4";
 
 const runtimeConfig = window.GYMHEART_SUPABASE_CONFIG || {};
 const useCustomLocalConfig =

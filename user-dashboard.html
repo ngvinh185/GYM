@@ -103,6 +103,12 @@
                 >Lịch tập</a
               >
               <a
+                class="text-[#5c3d44] hover:text-primary font-medium text-sm transition-colors cursor-pointer whitespace-nowrap"
+                data-section="nutrition"
+                onclick="showSection('nutrition')"
+                >Chuyên gia phân tích dinh dưỡng</a
+              >
+              <a
                 class="text-[#5c3d44] hover:text-primary font-medium text-sm transition-colors cursor-pointer"
                 data-section="profile"
                 onclick="showSection('profile')"
@@ -632,6 +638,215 @@
               <!-- Will be populated -->
             </div>
           </div>
+        </div>
+
+        <!-- Nutrition Section -->
+        <div id="section-nutrition" class="section-content hidden">
+          <div class="mb-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-[#1c0d11] mb-2">
+              Chuyên Gia Phân Tích Dinh Dưỡng
+            </h2>
+            <p class="text-[#9c495e] text-lg">
+              Nhập thông tin cơ thể và mục tiêu để nhận thực đơn cả ngày phù hợp
+              với ngân sách
+            </p>
+          </div>
+
+          <form
+            id="nutrition-form"
+            class="bg-white rounded-xl border border-pink-100 shadow-sm p-6 md:p-8 space-y-6"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div>
+                <span class="block text-sm font-semibold text-[#1c0d11] mb-2"
+                  >Giới tính</span
+                >
+                <div class="flex gap-3">
+                  <label
+                    class="flex-1 flex items-center justify-center gap-2 cursor-pointer rounded border border-pink-200 px-4 py-2.5 has-[:checked]:border-primary has-[:checked]:bg-pink-50 has-[:checked]:text-primary has-[:checked]:font-bold"
+                  >
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="male"
+                      checked
+                      class="text-primary focus:ring-primary"
+                    />
+                    Nam
+                  </label>
+                  <label
+                    class="flex-1 flex items-center justify-center gap-2 cursor-pointer rounded border border-pink-200 px-4 py-2.5 has-[:checked]:border-primary has-[:checked]:bg-pink-50 has-[:checked]:text-primary has-[:checked]:font-bold"
+                  >
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="female"
+                      class="text-primary focus:ring-primary"
+                    />
+                    Nữ
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label
+                  class="block text-sm font-semibold text-[#1c0d11] mb-2"
+                  for="nutrition-age"
+                  >Tuổi</label
+                >
+                <input
+                  id="nutrition-age"
+                  name="age"
+                  type="number"
+                  min="10"
+                  max="100"
+                  step="1"
+                  required
+                  placeholder="VD: 22"
+                  class="w-full rounded border-pink-200 bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                />
+              </div>
+
+              <div>
+                <label
+                  class="block text-sm font-semibold text-[#1c0d11] mb-2"
+                  for="nutrition-height"
+                  >Chiều cao (cm)</label
+                >
+                <input
+                  id="nutrition-height"
+                  name="height"
+                  type="number"
+                  min="100"
+                  max="250"
+                  step="0.1"
+                  required
+                  placeholder="VD: 170"
+                  class="w-full rounded border-pink-200 bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                />
+              </div>
+
+              <div>
+                <label
+                  class="block text-sm font-semibold text-[#1c0d11] mb-2"
+                  for="nutrition-weight"
+                  >Cân nặng (kg)</label
+                >
+                <input
+                  id="nutrition-weight"
+                  name="weight"
+                  type="number"
+                  min="25"
+                  max="300"
+                  step="0.1"
+                  required
+                  placeholder="VD: 65"
+                  class="w-full rounded border-pink-200 bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                />
+              </div>
+
+              <div>
+                <label
+                  class="block text-sm font-semibold text-[#1c0d11] mb-2"
+                  for="nutrition-activity"
+                  >Mức độ vận động</label
+                >
+                <select
+                  id="nutrition-activity"
+                  name="activity_factor"
+                  required
+                  class="w-full rounded border-pink-200 bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                >
+                  <option value="1.2">
+                    Ít vận động (ngồi nhiều, không tập)
+                  </option>
+                  <option value="1.375">Nhẹ (tập 1-3 buổi/tuần)</option>
+                  <option value="1.55" selected>Vừa (tập 3-5 buổi/tuần)</option>
+                  <option value="1.725">Nhiều (tập 6-7 buổi/tuần)</option>
+                  <option value="1.9">
+                    Rất nhiều (tập nặng, lao động chân tay)
+                  </option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  class="block text-sm font-semibold text-[#1c0d11] mb-2"
+                  for="nutrition-goal"
+                  >Mục tiêu</label
+                >
+                <select
+                  id="nutrition-goal"
+                  name="goal"
+                  required
+                  class="w-full rounded border-pink-200 bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                >
+                  <option value="muscle_gain">Tăng cơ</option>
+                  <option value="fat_loss">Giảm mỡ</option>
+                  <option value="recomp">Tăng cơ - giảm mỡ (recomp)</option>
+                  <option value="maintain">Duy trì cân nặng</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  class="block text-sm font-semibold text-[#1c0d11] mb-2"
+                  for="nutrition-meals"
+                  >Số bữa ăn mỗi ngày</label
+                >
+                <select
+                  id="nutrition-meals"
+                  name="count_meal"
+                  required
+                  class="w-full rounded border-pink-200 bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                >
+                  <option value="1">1 bữa</option>
+                  <option value="2">2 bữa</option>
+                  <option value="3" selected>3 bữa</option>
+                  <option value="4">4 bữa</option>
+                  <option value="5">5 bữa</option>
+                  <option value="6">6 bữa</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  class="block text-sm font-semibold text-[#1c0d11] mb-2"
+                  for="nutrition-budget"
+                  >Ngân sách (VNĐ/ngày)</label
+                >
+                <input
+                  id="nutrition-budget"
+                  name="budget"
+                  type="number"
+                  min="20000"
+                  max="10000000"
+                  step="5000"
+                  value="150000"
+                  required
+                  class="w-full rounded border-pink-200 bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                />
+              </div>
+            </div>
+
+            <div
+              id="nutrition-error"
+              class="hidden rounded bg-red-50 border border-red-200 text-red-700 p-3 text-sm"
+            ></div>
+
+            <button
+              id="nutrition-submit"
+              type="submit"
+              class="w-full md:w-auto px-8 py-3 bg-primary text-white rounded-full font-bold hover:bg-opacity-90 transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            >
+              <span class="material-symbols-outlined">restaurant_menu</span>
+              <span id="nutrition-submit-text"
+                >Phân tích &amp; lập thực đơn</span
+              >
+            </button>
+          </form>
+
+          <div id="nutrition-result" class="hidden mt-8"></div>
         </div>
 
         <!-- Profile Section -->
@@ -3527,5 +3742,7 @@
         </div>
       </div>
     </div>
+    <script src="js/nutrition.js"></script>
+    <script src="js/chat-widget.js"></script>
   </body>
 </html>

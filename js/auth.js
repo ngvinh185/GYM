@@ -195,12 +195,36 @@ document.getElementById("login-form")?.addEventListener("submit", async (e) => {
       return;
     }
 
-    // Store user info in localStorage (never store password hash on client)
-    const { password_hash, ...safeUser } = user;
+    // Lấy JWT thật từ backend
+    const API_URL = "http://localhost:8000";
+    let authData;
+    try {
+      const res = await fetch(`${API_URL}/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      authData = await res.json();
+      if (!res.ok) {
+        showAlert(authData.detail || "Đăng nhập thất bại!", "error");
+        btnText.textContent = "Đăng nhập";
+        return;
+      }
+    } catch (err) {
+      console.error("Backend login error:", err);
+      showAlert(
+        "Không kết nối được backend (cổng 8000). Hãy kiểm tra server đang chạy.",
+        "error",
+      );
+      btnText.textContent = "Đăng nhập";
+      return;
+    }
+
+    const safeUser = authData.user;
     const session = {
-      token: generateSessionToken(),
-      issuedAt: Date.now(),
-      expiresAt: Date.now() + SESSION_DURATION_MS,
+      token: authData.token, // JWT, bắt đầu bằng eyJ
+      issuedAt: authData.issued_at,
+      expiresAt: authData.expires_at,
       userId: safeUser.id,
     };
 
@@ -370,7 +394,11 @@ function checkAuth() {
     const parsedToken = JSON.parse(tokenRaw);
     const now = Date.now();
 
-    if (!parsedToken?.token || !parsedToken?.expiresAt) {
+    if (
+      !parsedToken?.token ||
+      !parsedToken?.expiresAt ||
+      !/^eyJ/.test(parsedToken.token) // chỉ chấp nhận JWT; token hex cũ sẽ bị xóa
+    ) {
       throw new Error("Invalid token format");
     }
 
