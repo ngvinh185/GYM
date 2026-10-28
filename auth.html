@@ -118,6 +118,24 @@ html,body{background:#f5f4ed!important;color:#203a30!important}body,main,header,
 /* Contrast correction for photo heroes and primary actions. */
 #home{color:#f5f4ed!important}#home h1,#home h1 span,#home p,#home .text-white,#home [class*=text-white],#home .text-primary{color:#f5f4ed!important}#home .absolute.inset-0 img{filter:grayscale(1) brightness(.62)!important}#home .absolute.inset-0 .bg-gradient-to-r{background:linear-gradient(90deg,rgba(18,34,27,.82),rgba(18,34,27,.58) 55%,rgba(18,34,27,.32))!important}#home button{background:#f5f4ed!important;color:#203a30!important;border:1px solid #f5f4ed!important}#home button:hover{background:#203a30!important;color:#f5f4ed!important}header{background:#f5f4ed!important;color:#203a30!important}header a,header h1,header h2{color:#203a30!important}header button{background:#203a30!important;color:#f5f4ed!important}
 img,#home .absolute.inset-0 img,#courses-grid img{filter:none!important}
+
+/* Keep the active navigation item in the shared green-and-paper palette. */
+html body header .nav-link.nav-link-active,html body header nav a[aria-current="page"]{color:#203a30!important;border-color:#203a30!important;font-weight:700!important}header nav a.nav-link{color:#203a30!important}header nav a.nav-link:hover{color:#203a30!important}
+
+header nav a.nav-link:hover,header nav a.nav-link:focus-visible{background:transparent!important;text-decoration:none!important}header nav a.nav-link:hover,header nav a.nav-link:hover *,header nav a.nav-link:focus-visible,header nav a.nav-link:focus-visible *{color:#203a30!important}
+
+html body header nav a.nav-link.nav-link-active,html body header nav a.nav-link.nav-link-active:hover,html body header nav a.nav-link.nav-link-active:focus{color:#203a30!important;border-color:#203a30!important;background:transparent!important;text-decoration:none!important;font-weight:700!important}html body header nav a.nav-link:not(.nav-link-active):hover,html body header nav a.nav-link:not(.nav-link-active):focus-visible{color:#203a30!important;background:transparent!important}
+
+/* Login page repair: remove unsuitable photo panel, retain all form wiring. */
+main>div{width:min(100%,560px)!important;max-width:560px!important;min-height:0!important;display:block!important;margin:36px auto!important;background:#f5f4ed!important;border:1px solid #203a30!important;border-radius:14px!important;box-shadow:0 12px 32px rgba(32,58,48,.12)!important}main>div>div:nth-child(1),main>div>div:nth-child(2){display:none!important}main>div>div:nth-child(3){display:none!important}main>div>div:nth-child(4){width:100%!important;max-width:none!important;padding:clamp(24px,5vw,48px)!important;background:#f5f4ed!important}main>div .text-center{text-align:left!important}main>div h1,main>div h2,main>div h3{color:#203a30!important}main>div p,main>div label,main>div a{color:#203a30!important}main>div .tab-active{color:#203a30!important;border-color:#203a30!important}main>div .tab-inactive{color:#203a30!important;border-color:transparent!important}main>div .tab-inactive:hover{border-color:#203a30!important}#login-form input,#signup-form input{background:#fffdf7!important;color:#203a30!important;border:1px solid #203a30!important;border-radius:8px!important}#login-form .relative>button,#signup-form .relative>button{position:absolute!important;right:12px!important;top:50%!important;transform:translateY(-50%)!important;width:40px!important;min-width:40px!important;height:40px!important;min-height:40px!important;padding:0!important;background:transparent!important;color:#203a30!important;border:0!important;box-shadow:none!important}#login-form .relative>button:hover,#signup-form .relative>button:hover{background:#e4e6dc!important;color:#203a30!important}#login-form>button[type=submit],#signup-form>button[type=submit]{width:100%!important;min-height:54px!important;background:#203a30!important;color:#f5f4ed!important;border:1px solid #203a30!important;box-shadow:none!important}#login-form>button[type=submit] *{color:#f5f4ed!important}header{background:#203a30!important;color:#f5f4ed!important}header h2,header a,header .material-symbols-outlined{color:#f5f4ed!important}header button{background:#203a30!important;color:#f5f4ed!important;border:1px solid #f5f4ed!important}.heart-pattern{background-image:none!important}
+@media(max-width:700px){main>div{margin:16px auto!important}main>div>div:nth-child(4){padding:24px!important}}
+
+/* Auth header: restore visible brand, links and back-button label on dark green. */
+html body header h2,html body header nav a,html body header button,html body header button *,html body header .material-symbols-outlined{color:#fffdf7!important;opacity:1!important;visibility:visible!important;text-shadow:none!important}html body header button{background:#203a30!important;border:1px solid #fffdf7!important;min-width:112px!important}html body header .text-\[\#1c0d11\]{color:#fffdf7!important}
+
+html body header button span{display:inline!important;color:#fffdf7!important;font-size:14px!important;font-weight:700!important;line-height:1.2!important;visibility:visible!important;opacity:1!important}html body header button{font-size:14px!important;text-indent:0!important;overflow:visible!important}
+
+html body header button:hover,html body header button:hover span{background:#f5f4ed!important;color:#203a30!important;border-color:#203a30!important}
 </style>
   
   
@@ -147,29 +165,20 @@ img,#home .absolute.inset-0 img,#courses-grid img{filter:none!important}
             GymHeart
           </h2>
         </div>
-        <nav class="hidden md:flex items-center gap-8">
-          <a
-            class="text-[#1c0d11] text-sm font-medium hover:text-primary transition-colors"
-            href="index.html"
-            >Trang chủ</a
-          >
-          <a
-            class="text-[#1c0d11] text-sm font-medium hover:text-primary transition-colors"
-            href="index.html#courses"
-            >Khóa học</a
-          >
-          <a
-            class="text-[#1c0d11] text-sm font-medium hover:text-primary transition-colors"
-            href="index.html#features"
-            >Lịch tập</a
-          >
+        <nav class="hidden md:flex items-center gap-7">
+          <a class="text-[#1c0d11] text-sm font-medium hover:text-primary transition-colors" href="index.html">Trang chủ</a>
+          <a class="text-[#1c0d11] text-sm font-medium hover:text-primary transition-colors" href="facilities.html">Cơ sở vật chất</a>
+          <a class="text-[#1c0d11] text-sm font-medium hover:text-primary transition-colors" href="coaches.html">HLV</a>
+          <a class="text-[#1c0d11] text-sm font-medium hover:text-primary transition-colors" href="services.html">Dịch vụ</a>
+          <a class="text-[#1c0d11] text-sm font-medium hover:text-primary transition-colors" href="index.html#community">Cộng đồng</a>
+          <a class="text-[#1c0d11] text-sm font-medium hover:text-primary transition-colors" href="index.html#contact">Liên hệ</a>
         </nav>
         <div class="flex gap-2">
           <button
             onclick="window.location.href = 'index.html'"
             class="hidden sm:flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 border-2 border-primary text-primary text-sm font-bold tracking-wide hover:bg-primary hover:text-white transition-all"
           >
-            Quay lại
+            <span>Quay lại</span>
           </button>
         </div>
       </div>
