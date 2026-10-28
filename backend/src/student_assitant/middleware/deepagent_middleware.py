@@ -3,6 +3,21 @@ from langchain.agents.middleware import AgentState
 from langchain.agents.middleware import wrap_model_call, ModelRequest, ModelResponse
 from typing import Callable
 from student_assitant.prompt.deepagent_prompt import MAIN_SYSTEM_PROMPT
+from langchain.agents.middleware import AgentMiddleware
+from langchain.agents.middleware import (
+    AgentMiddleware,
+    AgentState)
+from typing import NotRequired
+from langchain_core.messages import AIMessage
+class DeepAgentState(AgentState):
+    user_role: NotRequired[str]
+    user_id: NotRequired[str]
+    sql_traces: NotRequired[list]
+    subagent_call: NotRequired[list]
+
+
+class DeepAgentStateMiddleware(AgentMiddleware):
+    state_schema = DeepAgentState
 
 @wrap_model_call
 def injectSystemPromptDeepagent(
@@ -26,3 +41,19 @@ def injectSystemPromptDeepagent(
   system_prompt = prompt + "\n" + request.system_prompt
   request = request.override(system_prompt=system_prompt)
   return handler(request)
+
+class ResetSqlTrace(AgentMiddleware):
+  def before_agent(self, state):
+    return {"sql_traces": None}
+class ResetSubagentCall(AgentMiddleware):
+  def before_agent(self, state):
+    return {"subagent_call": None}
+class SubagentCall(AgentMiddleware):
+  def after_agent(self, state):
+    sub_agent_calls = []
+    for m in state.get("messages", []):
+      if isinstance(m, AIMessage):
+        for tc in m.tool_calls:
+          if tc['name'] == 'task':
+            sub_agent_calls.append(tc['args']['subagent_type'])
+    return {"subagent_call": sub_agent_calls}

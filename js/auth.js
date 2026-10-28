@@ -196,7 +196,7 @@ document.getElementById("login-form")?.addEventListener("submit", async (e) => {
     }
 
     // Lấy JWT thật từ backend
-    const API_URL = "http://localhost:8000";
+    const API_URL = "http://localhost:8001";
     let authData;
     try {
       const res = await fetch(`${API_URL}/auth/login`, {
@@ -213,7 +213,7 @@ document.getElementById("login-form")?.addEventListener("submit", async (e) => {
     } catch (err) {
       console.error("Backend login error:", err);
       showAlert(
-        "Không kết nối được backend (cổng 8000). Hãy kiểm tra server đang chạy.",
+        "Không kết nối được backend (cổng 8001). Hãy kiểm tra server đang chạy.",
         "error",
       );
       btnText.textContent = "Đăng nhập";

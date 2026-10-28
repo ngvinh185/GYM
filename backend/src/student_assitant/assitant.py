@@ -1,11 +1,12 @@
 from langgraph.checkpoint.memory import InMemorySaver
 
+from student_assitant.middleware.deepagent_middleware import ResetSqlTrace
 from student_assitant.agent.deep_agent import create_deepagent
 from student_assitant.agent.pdf_agent import create_pdf_subagent
-from student_assitant.agent.sql_agent import MainStateMiddleware, create_sql_subagent
+from student_assitant.agent.sql_agent import create_sql_subagent
 from student_assitant.config import Settings, backend
 from student_assitant.database.database import Database
-from student_assitant.middleware.deepagent_middleware import injectSystemPromptDeepagent
+from student_assitant.middleware.deepagent_middleware import injectSystemPromptDeepagent, DeepAgentStateMiddleware, ResetSubagentCall, SubagentCall
 from student_assitant.model.model import build_chat_model
 from student_assitant.prompt.deepagent_prompt import MAIN_SYSTEM_PROMPT
 
@@ -26,7 +27,7 @@ class Graph:
         subagents=[create_sql_subagent(db), create_pdf_subagent()],
         backend=backend,
         checkpointer=InMemorySaver(),
-        middleware=[MainStateMiddleware(), injectSystemPromptDeepagent],
+        middleware=[DeepAgentStateMiddleware(), injectSystemPromptDeepagent, ResetSqlTrace(), ResetSubagentCall(), SubagentCall()],
     )
 
   def invoke(self, message: str, thread_id: str):

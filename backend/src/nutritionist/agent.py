@@ -30,7 +30,7 @@ from nutritionist.prompt import prompt as PROMPT_TEMPLATE
 
 MODEL = "gpt-4.1-mini"
 MAX_STEPS = 10                   # số vòng gọi tool tối đa
-FOODS_PER_GROUP = 7              # số món random mỗi nhóm đưa vào prompt
+FOODS_PER_GROUP = 10             # số món random mỗi nhóm đưa vào prompt
 DATA_PATH = Path(__file__).parent / "data.json"
 
 # Sai số chấp nhận được (protein, carb, fat) - khớp với prompt

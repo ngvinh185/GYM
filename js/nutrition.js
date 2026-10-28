@@ -5,11 +5,11 @@
  * Nhúng vào user-dashboard.html SAU js/auth.js:
  *   <script src="js/nutrition.js"></script>
  *
- * Địa chỉ backend: window.GYMHEART_API_BASE (mặc định http://localhost:8000),
+ * Địa chỉ backend: window.GYMHEART_API_BASE (mặc định http://localhost:8001),
  * giống chat-widget.js. Token lấy từ localStorage "gymheart_token".
  */
 (function () {
-  const API_BASE = window.GYMHEART_API_BASE || "http://localhost:8000";
+  const API_BASE = window.GYMHEART_API_BASE || "http://localhost:8001";
   const MENU_URL = API_BASE + "/nutrition/menu";
   const REQUEST_TIMEOUT_MS = 180000; // agent có thể gọi tool nhiều vòng nên khá lâu
 

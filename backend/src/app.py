@@ -13,7 +13,8 @@ import psycopg2.extras
 from fastapi import Depends, FastAPI, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
-
+from student_assitant.pdf.pdf_handle import _get_retriever
+_get_retriever()  # khởi tạo sẵn để load embeddings và vectorstore ngay khi app start, tránh chậm khi gọi lần đầu
 from student_assitant.config import DB_CONFIG
 from student_assitant.assitant import Graph
 from nutritionist.agent import plan_menu
@@ -22,7 +23,7 @@ from nutritionist.caculate import GOAL_CONFIG, MEAL_SPLIT
 app = FastAPI(title="GymHeart Assistant API")
 
 # Origin của trang web (không dùng "*" khi có header Authorization)
-ALLOWED_ORIGINS = os.environ.get("ALLOWED_ORIGINS", "http://localhost:5500").split(",")
+ALLOWED_ORIGINS = ["http://localhost:8000", "http://127.0.0.1:8000", "http://localhost:5500", "http://127.0.0.1:5500"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
@@ -197,6 +198,14 @@ def chat(req: ChatRequest, user: CurrentUser = Depends(get_current_user)):
     print(f"[chat] graph san sang sau {time.time()-t0:.1f}s", flush=True)
     try:
         result = graph.invoke(req.message, thread_id=thread_id)
+        print("------------SQL TRACES------------")
+        print(result['sql_traces'])
+        print("------------DEEPAGENT CALLS------------")
+        print(result['subagent_call'])
+        print("------------MESSAGES------------")
+        for m in result['messages']:
+            print(m)
+            print("-------------------")
     except Exception:
         logging.exception("Lỗi khi xử lý chat cho user_id=%s", user.user_id)
         raise HTTPException(status_code=500, detail="Lỗi xử lý yêu cầu")
@@ -241,4 +250,4 @@ def nutrition_menu(req: MenuRequest, user: CurrentUser = Depends(get_current_use
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("app:app", host="0.0.0.0", port=8001, reload=True)

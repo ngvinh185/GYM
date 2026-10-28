@@ -5,26 +5,26 @@
  *
  * Đổi địa chỉ backend khi deploy: đặt trước thẻ script này
  *   <script>window.GYMHEART_API_BASE = "https://api.ten-mien-cua-ban.com";</script>
- * (không đặt thì mặc định http://localhost:8000).
+ * (không đặt thì mặc định http://localhost:8001).
  *
  * Token lấy từ localStorage "gymheart_token" do FastAPI cấp qua /auth/login.
  * Markdown (bảng, in đậm, danh sách) được render bằng marked + DOMPurify,
  * tự tải từ cdnjs; tải lỗi thì hiện chữ thường, widget vẫn dùng bình thường.
  */
 (function () {
-  const API_BASE = window.GYMHEART_API_BASE || "http://localhost:8000";
+  const API_BASE = window.GYMHEART_API_BASE || "http://localhost:8001";
   const CHAT_API_URL = API_BASE + "/chat";
   const REQUEST_TIMEOUT_MS = 90000; // lần chat đầu server có thể chậm vì tải model
   const MAX_INPUT_LEN = 4000; // khớp giới hạn của backend
   const MAX_SAVED_MSGS = 60; // số tin tối đa lưu để dựng lại khi đổi trang
   const STATE_KEY = "gh_chat_state";
 
-  // ---- style: theo đúng theme GymHeart (primary #f42559, font Lexend) ----
+  // ---- style: theo đúng theme GymHeart (primary #203a30, font Lexend) ----
   const css = `
     #gh-chat-btn {
       position: fixed; right: 24px; bottom: 24px; width: 56px; height: 56px;
-      border-radius: 9999px; border: none; background: #f42559; color: #fff;
-      font-size: 26px; cursor: pointer; box-shadow: 0 4px 14px rgba(244,37,89,.4);
+      border-radius: 9999px; border: none; background: #203a30; color: #fff;
+      font-size: 26px; cursor: pointer; box-shadow: 0 4px 14px rgba(32,58,48,.28);
       z-index: 9999; display: flex; align-items: center; justify-content: center;
       transition: transform .15s ease;
     }
@@ -32,22 +32,23 @@
     #gh-chat-box {
       position: fixed; right: 24px; bottom: 92px; width: 340px; max-width: calc(100vw - 32px);
       height: 480px; max-height: calc(100vh - 140px); display: none; flex-direction: column;
-      background: #fcf8f9; border-radius: 0.75rem; overflow: hidden; z-index: 9999;
+      background: #f5f4ed; border-radius: 0.75rem; overflow: hidden; z-index: 9999;
       box-shadow: 0 10px 30px rgba(0,0,0,.18); font-family: "Lexend", sans-serif;
-      border: 1px solid #f4e7ea;
+      border: 1px solid #cbd5ce;
     }
     #gh-chat-head {
-      background: #f42559; color: #fff; padding: 14px 16px; font-weight: 600;
+      background: #203a30; color: #fff; padding: 14px 16px; font-weight: 600;
       display: flex; align-items: center; justify-content: space-between; font-size: 15px;
     }
     #gh-chat-head button {
-      background: none; border: none; color: #fff; font-size: 20px; cursor: pointer; line-height: 1;
+      background: transparent !important; border: none; color: #fff; font-size: 20px; cursor: pointer; line-height: 1;
     }
+    #gh-chat-head button:hover, #gh-chat-head button:focus-visible { background: transparent !important; color: #fff !important; }
     #gh-chat-msgs { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
     .gh-msg { max-width: 82%; padding: 9px 13px; border-radius: 0.75rem; white-space: pre-wrap;
       font-size: 13.5px; line-height: 1.45; overflow-wrap: anywhere; }
-    .gh-msg.user { align-self: flex-end; background: #f42559; color: #fff; border-bottom-right-radius: 4px; }
-    .gh-msg.bot { align-self: flex-start; background: #fff; color: #1c0d11; border: 1px solid #f4e7ea;
+    .gh-msg.user { align-self: flex-end; background: #203a30; color: #fff; border-bottom-right-radius: 4px; }
+    .gh-msg.bot { align-self: flex-start; background: #fff; color: #203a30; border: 1px solid #cbd5ce;
       border-bottom-left-radius: 4px; }
 
     /* nội dung markdown trong tin nhắn của bot */
@@ -57,17 +58,17 @@
     .gh-msg.bot.md p { margin: 0 0 6px; }
     .gh-msg.bot.md ul, .gh-msg.bot.md ol { margin: 4px 0 6px; padding-left: 18px; }
     .gh-msg.bot.md li { margin: 2px 0; }
-    .gh-msg.bot.md a { color: #f42559; text-decoration: underline; }
+    .gh-msg.bot.md a { color: #203a30; text-decoration: underline; }
     .gh-msg.bot.md code { background: rgba(244,37,89,.08); padding: 1px 4px; border-radius: 4px; font-size: 12.5px; }
     .gh-msg.bot.md table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 6px 0; }
-    .gh-msg.bot.md th, .gh-msg.bot.md td { border: 1px solid #f4e7ea; padding: 4px 8px;
+    .gh-msg.bot.md th, .gh-msg.bot.md td { border: 1px solid #cbd5ce; padding: 4px 8px;
       font-size: 12.5px; text-align: left; white-space: nowrap; }
-    .gh-msg.bot.md th { background: #fcf0f3; font-weight: 600; }
+    .gh-msg.bot.md th { background: #e8eee8; font-weight: 600; }
 
-    #gh-chat-form { display: flex; border-top: 1px solid #f4e7ea; background: #fff; }
+    #gh-chat-form { display: flex; border-top: 1px solid #cbd5ce; background: #fff; }
     #gh-chat-in { flex: 1; border: none; padding: 12px 14px; outline: none; font-family: inherit;
-      font-size: 13.5px; background: transparent; color: #1c0d11; }
-    #gh-chat-form button.send { border: none; background: none; color: #f42559; padding: 0 16px;
+      font-size: 13.5px; background: transparent; color: #203a30; }
+    #gh-chat-form button.send { border: none; background: none; color: #203a30; padding: 0 16px;
       cursor: pointer; font-weight: 600; font-size: 13.5px; }
     #gh-chat-form button.send:disabled { opacity: .4; cursor: default; }
 

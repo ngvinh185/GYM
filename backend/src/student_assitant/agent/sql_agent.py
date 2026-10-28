@@ -1,24 +1,9 @@
-from typing import NotRequired
 
-from langchain.agents.middleware import (
-    AgentMiddleware,
-    AgentState,
-    ModelCallLimitMiddleware,
-    ToolCallLimitMiddleware,
-)
-
-from student_assitant.middleware.sql_middleware import injectSystemPrompt
+from student_assitant.middleware.sql_middleware import injectSystemPrompt, SqlTrace
 from student_assitant.prompt.sql_prompt import SQL_AGENT_SYSTEM_PROMPT
 from student_assitant.tools.sql_tools import get_sql_tool
 
-
-class MainState(AgentState):
-    user_role: NotRequired[str]
-    user_id: NotRequired[str]
-
-
-class MainStateMiddleware(AgentMiddleware):
-    state_schema = MainState
+from student_assitant.middleware.sql_middleware import SQLStateMiddleware
 
 
 def create_sql_subagent(db) -> dict:
@@ -32,8 +17,9 @@ def create_sql_subagent(db) -> dict:
         "tools": get_sql_tool(db),
         "skills": ["/skills/"],
         "middleware": [
-            MainStateMiddleware(),
+            SQLStateMiddleware(),
             injectSystemPrompt,
+            SqlTrace(),
             # chốt chặn chống loop: vượt giới hạn thì tool bị chặn, model nhận thông báo lỗi
             # ToolCallLimitMiddleware(tool_name="ls", run_limit=2, exit_behavior="continue"),
             # ToolCallLimitMiddleware(run_limit=15, exit_behavior="continue"),

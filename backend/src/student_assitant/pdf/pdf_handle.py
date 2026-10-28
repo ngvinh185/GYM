@@ -1,7 +1,10 @@
 import os
 from functools import lru_cache
+from langchain_core.vectorstores import InMemoryVectorStore
+from langchain_openai import OpenAIEmbeddings
 from pathlib import Path
-
+from dotenv import load_dotenv
+load_dotenv()  # load biến môi trường từ file .env
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
@@ -12,13 +15,13 @@ DEFAULT_DATA_PATH = PROJECT_ROOT / "data" / "thong_tin_phong_gym.txt"
 # Dòng ngăn cách giữa các mục trong file txt
 SECTION_SEPARATOR = "\n---\n"
 
-
+lru_cache(maxsize=1)
 def _data_path() -> Path:
     # Có thể ghi đè bằng DATA_PATH trong .env, không có thì dùng đường dẫn mặc định
     return Path(os.environ.get("DATA_PATH") or DEFAULT_DATA_PATH)
 
 
-@lru_cache(maxsize=1)
+lru_cache(maxsize=1)
 def get_docs():
     path = _data_path()
     if not path.is_file():
@@ -36,3 +39,18 @@ def get_docs():
     # Chỉ cắt thêm nếu một mục dài hơn chunk_size
     splitter = RecursiveCharacterTextSplitter(chunk_size=750, chunk_overlap=200)  # giữ nguyên dòng cũ của bạn
     return splitter.split_documents(docs)
+
+EMBEDDING_MODEL_NAME = "text-embedding-3-small"
+lru_cache(maxsize=1)
+def _get_embeddings():
+    # API key lấy từ biến môi trường OPENAI_API_KEY (file .env)
+    return OpenAIEmbeddings(model=EMBEDDING_MODEL_NAME)
+
+
+@lru_cache(maxsize=1)
+def _get_retriever():
+    vectorstore = InMemoryVectorStore.from_documents(
+        documents=get_docs(),
+        embedding=_get_embeddings(),
+    )
+    return vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 1})

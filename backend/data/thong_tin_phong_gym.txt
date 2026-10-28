@@ -66,7 +66,6 @@ GYM VRS hiện có 5 khóa học: Boxing Fitness - Võ Thuật & Thể Hình (3.
 Khóa học tại GYM VRS: Boxing Fitness - Võ Thuật & Thể Hình
 Cấp độ: Mới bắt đầu
 Thời lượng: 8 tuần
-Số học viên: 2/12
 Học phí: 3.000.000 đồng
 Mô tả: Kết hợp boxing và fitness training, giúp đốt cháy calories, tăng phản xạ và sức mạnh.
 
@@ -76,7 +75,6 @@ Mô tả: Kết hợp boxing và fitness training, giúp đốt cháy calories, 
 Khóa học tại GYM VRS: Giảm Cân Thần Tốc 30 Ngày
 Cấp độ: Mới bắt đầu
 Thời lượng: 4 tuần
-Số học viên: 2/15
 Học phí: 2.500.000 đồng
 Mô tả: Chương trình giảm cân khoa học và hiệu quả, kết hợp giữa cardio và strength training.
 
@@ -86,7 +84,6 @@ Mô tả: Chương trình giảm cân khoa học và hiệu quả, kết hợp g
 Khóa học tại GYM VRS: HIIT Training - Đốt Mỡ Cực Mạnh
 Cấp độ: Trung cấp
 Thời lượng: 6 tuần
-Số học viên: 4/15
 Học phí: 2.800.000 đồng
 Mô tả: High Intensity Interval Training - phương pháp tập luyện cường độ cao, đốt cháy mỡ thừa hiệu quả trong thời gian ngắn.
 
@@ -96,7 +93,6 @@ Mô tả: High Intensity Interval Training - phương pháp tập luyện cườ
 Khóa học tại GYM VRS: Tăng Cơ Bắp Chuyên Nghiệp
 Cấp độ: Trung cấp
 Thời lượng: 8 tuần
-Số học viên: 5/12
 Học phí: 3.500.000 đồng
 Mô tả: Lộ trình tập luyện tăng cơ chuyên nghiệp với các bài tập compound và isolation, phù hợp cho người muốn phát triển cơ bắp.
 
@@ -106,7 +102,6 @@ Mô tả: Lộ trình tập luyện tăng cơ chuyên nghiệp với các bài t
 Khóa học tại GYM VRS: Yoga Và Flexibility
 Cấp độ: Nâng cao
 Thời lượng: 6 tuần
-Số học viên: 9/20
 Học phí: 1.800.000 đồng
 Mô tả: Khóa học Yoga kết hợp stretching giúp tăng cường sự linh hoạt, giảm stress và cải thiện tư thế.
 
